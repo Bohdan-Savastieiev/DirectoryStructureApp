@@ -8,6 +8,7 @@ using DirectoryStructureApp.DAL.Interfaces;
 using DirectoryStructureApp.DAL.Repositories;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using static System.Formats.Asn1.AsnWriter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,3 +49,7 @@ app.MapControllerRoute(
     pattern: "{controller=Directories}/{action=Index}/{id?}");
 
 app.Run();
+
+using var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+DbInitializer.Seed(context);

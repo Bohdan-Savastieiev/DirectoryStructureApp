@@ -18,7 +18,7 @@ public class DirectoriesController : Controller
     public async Task<IActionResult> Index()
     {
         var directories = await _directoryService.GetDirectoriesWithoutParentAsync();
-        return Ok(directories);
+        return View(directories);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
