@@ -1,5 +1,7 @@
 ﻿using DirectoryStructureApp.DAL.Interfaces;
 using DirectoryStructureApp.DAL.Models;
+using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace DirectoryStructureApp.DAL.Repositories;
 
@@ -10,39 +12,44 @@ public class DirectoryRepository : IDirectoryRepository
     {
         _context = context;
     }
-
-    public Task AddDirectoryAsync(AppDirectory directory)
+    public async Task<IEnumerable<DirectoryEntity>> GetAllDirectoriesAsync()
     {
-        throw new NotImplementedException();
+        return await _context.Directories.ToListAsync();
     }
 
-    public Task DeleteDirectoryAsync(int id)
+    public async Task<IEnumerable<DirectoryEntity>> GetDirectoriesWithoutParentAsync()
     {
-        throw new NotImplementedException();
+        return await _context.Directories
+            .Where(d => d.ParentDirectoryId == null)
+            .ToListAsync();
     }
 
-    public Task<IEnumerable<AppDirectory>> GetAllDirectoriesAsync()
+    public async Task<DirectoryEntity?> GetDirectoryByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Directories.FindAsync(id);
     }
 
-    public Task<AppDirectory> GetDirectoryByIdAsync(int id)
+    public async Task InsertDirectoryAsync(DirectoryEntity directory)
     {
-        throw new NotImplementedException();
+        await _context.Directories.AddAsync(directory);
     }
 
-    public Task<IEnumerable<AppDirectory>> GetSubDirectoriesAsync(int parentId)
+    public void UpdateDirectory(DirectoryEntity directory)
     {
-        throw new NotImplementedException();
+        _context.Entry(directory).State = EntityState.Modified;
     }
 
-    public Task SaveChangesAsync()
+    public async Task DeleteDirectoryAsync(int id)
     {
-        throw new NotImplementedException();
+        var directory = await _context.Directories.FindAsync(id);
+        if (directory != null)
+        {
+            _context.Directories.Remove(directory);
+        }
     }
 
-    public Task UpdateDirectoryAsync(AppDirectory directory)
+    public async Task SaveChangesAsync()
     {
-        throw new NotImplementedException();
+        await _context.SaveChangesAsync();
     }
 }

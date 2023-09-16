@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DirectoryStructureApp.DAL.Models;
 
-public class AppDirectory
+public class DirectoryEntity
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = null!;
     public int? ParentDirectoryId { get; set; }
-    public AppDirectory? ParentDirectory { get; set; }
-    public List<AppDirectory> SubDirectories { get; set; }
+    public DirectoryEntity? ParentDirectory { get; set; }
+    public ICollection<DirectoryEntity>? SubDirectories { get; set; }
 
 }

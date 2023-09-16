@@ -4,11 +4,11 @@ namespace DirectoryStructureApp.DAL.Interfaces;
 
 public interface IDirectoryRepository
 {
-    Task<IEnumerable<AppDirectory>> GetAllDirectoriesAsync();
-    Task<AppDirectory> GetDirectoryByIdAsync(int id);
-    Task<IEnumerable<AppDirectory>> GetSubDirectoriesAsync(int parentId);
-    Task AddDirectoryAsync(AppDirectory directory);
-    Task UpdateDirectoryAsync(AppDirectory directory);
+    Task<IEnumerable<DirectoryEntity>> GetAllDirectoriesAsync();
+    Task<IEnumerable<DirectoryEntity>> GetDirectoriesWithoutParentAsync();
+    Task<DirectoryEntity?> GetDirectoryByIdAsync(int id);
+    Task InsertDirectoryAsync(DirectoryEntity directory);
+    void UpdateDirectory(DirectoryEntity directory);
     Task DeleteDirectoryAsync(int id);
     Task SaveChangesAsync();
 }

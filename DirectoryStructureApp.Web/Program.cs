@@ -1,6 +1,28 @@
+using DirectoryStructureApp.BLL.DTOs;
+using DirectoryStructureApp.BLL.Interfaces;
+using DirectoryStructureApp.BLL.Mappers;
+using DirectoryStructureApp.BLL.Services;
+using DirectoryStructureApp.BLL.Validators;
+using DirectoryStructureApp.DAL;
+using DirectoryStructureApp.DAL.Interfaces;
+using DirectoryStructureApp.DAL.Repositories;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' was not found.");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(connectionString));
+
+builder.Services.AddScoped<IDirectoryRepository, DirectoryRepository>();
+builder.Services.AddScoped<IDirectoryService, DirectoryService>();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+builder.Services.AddTransient<IValidator<DirectoryDto>, DirectoryDtoValidator>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -13,6 +35,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -22,6 +45,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Directories}/{action=Index}/{id?}");
 
 app.Run();
