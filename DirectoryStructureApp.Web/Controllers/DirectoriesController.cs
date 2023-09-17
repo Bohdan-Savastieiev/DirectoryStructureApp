@@ -31,7 +31,7 @@ public class DirectoriesController : Controller
         var directories = new List<DirectoryDto>();
         if (directoryId == null)
         {
-            var rootDirectories = await _directoryService.GetDirectoriesWithoutParentAsync();
+            var rootDirectories = await _directoryService.GetRootDirectoriesAsync();
             directories.AddRange(rootDirectories);
         }
         else
@@ -120,12 +120,12 @@ public class DirectoriesController : Controller
         var directories = new List<DirectoryDto>();
         if (directoryId == null)
         {
-            var rootDirectories = await _directoryService.GetDirectoriesWithoutParentAsync();
+            var rootDirectories = await _directoryService.GetRootDirectoriesWithAllSubsAsync();
             directories.AddRange(rootDirectories);
         }
         else
         {
-            var directory = await _directoryService.GetDirectoryByIdAsync((int)directoryId);
+            var directory = await _directoryService.GetDirectoryByIdWithAllSubsAsync((int)directoryId);
             if (directory == null)
             {
                 return RedirectToAction("Error");

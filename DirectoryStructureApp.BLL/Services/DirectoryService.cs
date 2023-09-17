@@ -24,21 +24,16 @@ public class DirectoryService : IDirectoryService
         _validator = validator;
     }
 
-    public async Task<IEnumerable<DirectoryDto>> GetAllDirectoriesAsync()
+    public async Task<IEnumerable<DirectoryDto>> GetRootDirectoriesAsync()
     {
-        var directoryEntities = await _directoryRepository.GetAllDirectoriesAsync();
+        var directoryEntities = await _directoryRepository.GetRootDirectoriesAsync();
         var directoryDtos = _mapper.Map<IEnumerable<DirectoryDto>>(directoryEntities);
         return directoryDtos;
     }
-    public async Task<IEnumerable<DirectoryDto>> GetDirectoriesWithoutParentAsync()
+
+    public async Task<IEnumerable<DirectoryDto>> GetRootDirectoriesWithAllSubsAsync()
     {
-        var directoryEntities = await _directoryRepository.GetDirectoriesWithoutParentAsync();
-        var directoryDtos = _mapper.Map<IEnumerable<DirectoryDto>>(directoryEntities);
-        return directoryDtos;
-    }
-    public async Task<IEnumerable<DirectoryDto>> GetSubDirectoriesAsync(int parentDirectoryId)
-    {
-        var directoryEntities = await _directoryRepository.GetSubDirectoriesAsync(parentDirectoryId);
+        var directoryEntities = await _directoryRepository.GetRootDirectoriesWithAllSubsAsync();
         var directoryDtos = _mapper.Map<IEnumerable<DirectoryDto>>(directoryEntities);
         return directoryDtos;
     }
@@ -46,6 +41,13 @@ public class DirectoryService : IDirectoryService
     public async Task<DirectoryDto?> GetDirectoryByIdAsync(int id)
     {
         var directoryEntity = await _directoryRepository.GetDirectoryByIdAsync(id);
+        var directoryDto = _mapper.Map<DirectoryDto>(directoryEntity);
+        return directoryDto;
+    }
+
+    public async Task<DirectoryDto?> GetDirectoryByIdWithAllSubsAsync(int id)
+    {
+        var directoryEntity = await _directoryRepository.GetDirectoryByIdWithAllSubsAsync(id);
         var directoryDto = _mapper.Map<DirectoryDto>(directoryEntity);
         return directoryDto;
     }
@@ -68,20 +70,6 @@ public class DirectoryService : IDirectoryService
         var directoryEntity = _mapper.Map<DirectoryEntity>(directoryDto);
 
         await _directoryRepository.AddDirectoryAsync(directoryEntity);
-        await _directoryRepository.SaveChangesAsync();
-    }
-
-    public async Task UpdateDirectoryAsync(DirectoryDto directoryDto)
-    {
-        var validationResult = await _validator.ValidateAsync(directoryDto);
-        if (!validationResult.IsValid)
-        {
-            throw new ValidationException(validationResult.Errors);
-        }
-
-        var directoryEntity = _mapper.Map<DirectoryEntity>(directoryDto);
-
-        _directoryRepository.UpdateDirectory(directoryEntity);
         await _directoryRepository.SaveChangesAsync();
     }
 

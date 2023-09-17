@@ -7,7 +7,7 @@
 @foreach(var parentDirectory in Model)
 {
     <h4>
-        "Folder" - @parentDirectory.Name
+        Folder: @parentDirectory.Name
         <a asp-controller="Directories" asp-action="ConfirmDelete" asp-route-directoryId="@parentDirectory.Id" class="btn btn-danger btn-sm">Delete</a>
     </h4>
     foreach (var subDirectory in parentDirectory.SubDirectories)

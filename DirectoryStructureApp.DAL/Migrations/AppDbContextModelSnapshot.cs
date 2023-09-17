@@ -7,53 +7,52 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DirectoryStructureApp.DAL.Migrations
+namespace DirectoryStructureApp.DAL.Migrations;
+
+[DbContext(typeof(AppDbContext))]
+partial class AppDbContextModelSnapshot : ModelSnapshot
 {
-    [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
+        modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
 
-            modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+        modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("TEXT");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .HasColumnType("TEXT");
 
-                    b.Property<int?>("ParentDirectoryId")
-                        .HasColumnType("INTEGER");
+                b.Property<int?>("ParentDirectoryId")
+                    .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("ParentDirectoryId", "Name")
-                        .IsUnique();
+                b.HasIndex("ParentDirectoryId", "Name")
+                    .IsUnique();
 
-                    b.ToTable("Directories");
-                });
+                b.ToTable("Directories");
+            });
 
-            modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
-                {
-                    b.HasOne("DirectoryStructureApp.DAL.Models.DirectoryEntity", "ParentDirectory")
-                        .WithMany("SubDirectories")
-                        .HasForeignKey("ParentDirectoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
+            {
+                b.HasOne("DirectoryStructureApp.DAL.Models.DirectoryEntity", "ParentDirectory")
+                    .WithMany("SubDirectories")
+                    .HasForeignKey("ParentDirectoryId")
+                    .OnDelete(DeleteBehavior.Cascade);
 
-                    b.Navigation("ParentDirectory");
-                });
+                b.Navigation("ParentDirectory");
+            });
 
-            modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
-                {
-                    b.Navigation("SubDirectories");
-                });
+        modelBuilder.Entity("DirectoryStructureApp.DAL.Models.DirectoryEntity", b =>
+            {
+                b.Navigation("SubDirectories");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }

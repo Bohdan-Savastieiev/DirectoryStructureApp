@@ -9,6 +9,7 @@ namespace DirectoryStructureApp.BLL.Services;
 public class FileSystemService : IFileSystemService
 {
     private readonly IMapper _mapper;
+
     private readonly string _baseExportPath;
     public FileSystemService(IMapper mapper, IHostEnvironment env)
     {
@@ -18,16 +19,9 @@ public class FileSystemService : IFileSystemService
 
     public void ExportDirectoriesToFile(IEnumerable<DirectoryDto> directories)
     {
-
         var filePath = GetNewExportFilePath();
         var directoriesForSerialization = _mapper.Map<List<DirectorySerializationDto>>(directories);
-        var settings = new JsonSerializerSettings
-        {
-            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-            PreserveReferencesHandling = PreserveReferencesHandling.All,
-            Formatting = Formatting.Indented
-        };
-        var json = JsonConvert.SerializeObject(directoriesForSerialization, settings);
+        var json = JsonConvert.SerializeObject(directoriesForSerialization, Formatting.Indented);
         File.WriteAllText(filePath, json);
     }
 
@@ -68,7 +62,17 @@ public class FileSystemService : IFileSystemService
 
     private void PopulateSubDirectories(DirectoryDto parentDto, DirectoryInfo parentDirectoryInfo)
     {
-        foreach (var directory in parentDirectoryInfo.GetDirectories())
+        DirectoryInfo[] subDirectories;
+        try
+        {
+            subDirectories = parentDirectoryInfo.GetDirectories();
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return;
+        }
+
+        foreach (var directory in subDirectories)
         {
             var directoryDto = new DirectoryDto
             {

@@ -1,0 +1,1417 @@
+[
+  {
+    "Name": "Creating Digital Images",
+    "SubDirectories": [
+      {
+        "Name": "Evidence",
+        "SubDirectories": []
+      },
+      {
+        "Name": "Graphic Products",
+        "SubDirectories": [
+          {
+            "Name": "Process",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Final Product",
+            "SubDirectories": []
+          }
+        ]
+      },
+      {
+        "Name": "Resources",
+        "SubDirectories": [
+          {
+            "Name": "Primary Sources",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Secondary Sources",
+            "SubDirectories": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "DirectoryStructureApp",
+    "SubDirectories": [
+      {
+        "Name": ".git",
+        "SubDirectories": [
+          {
+            "Name": "hooks",
+            "SubDirectories": []
+          },
+          {
+            "Name": "info",
+            "SubDirectories": []
+          },
+          {
+            "Name": "logs",
+            "SubDirectories": [
+              {
+                "Name": "refs",
+                "SubDirectories": [
+                  {
+                    "Name": "heads",
+                    "SubDirectories": []
+                  },
+                  {
+                    "Name": "remotes",
+                    "SubDirectories": [
+                      {
+                        "Name": "origin",
+                        "SubDirectories": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "objects",
+            "SubDirectories": [
+              {
+                "Name": "00",
+                "SubDirectories": []
+              },
+              {
+                "Name": "01",
+                "SubDirectories": []
+              },
+              {
+                "Name": "02",
+                "SubDirectories": []
+              },
+              {
+                "Name": "03",
+                "SubDirectories": []
+              },
+              {
+                "Name": "05",
+                "SubDirectories": []
+              },
+              {
+                "Name": "06",
+                "SubDirectories": []
+              },
+              {
+                "Name": "07",
+                "SubDirectories": []
+              },
+              {
+                "Name": "0a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "0c",
+                "SubDirectories": []
+              },
+              {
+                "Name": "0d",
+                "SubDirectories": []
+              },
+              {
+                "Name": "10",
+                "SubDirectories": []
+              },
+              {
+                "Name": "11",
+                "SubDirectories": []
+              },
+              {
+                "Name": "12",
+                "SubDirectories": []
+              },
+              {
+                "Name": "16",
+                "SubDirectories": []
+              },
+              {
+                "Name": "17",
+                "SubDirectories": []
+              },
+              {
+                "Name": "18",
+                "SubDirectories": []
+              },
+              {
+                "Name": "19",
+                "SubDirectories": []
+              },
+              {
+                "Name": "1f",
+                "SubDirectories": []
+              },
+              {
+                "Name": "20",
+                "SubDirectories": []
+              },
+              {
+                "Name": "22",
+                "SubDirectories": []
+              },
+              {
+                "Name": "24",
+                "SubDirectories": []
+              },
+              {
+                "Name": "2a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "2e",
+                "SubDirectories": []
+              },
+              {
+                "Name": "2f",
+                "SubDirectories": []
+              },
+              {
+                "Name": "31",
+                "SubDirectories": []
+              },
+              {
+                "Name": "32",
+                "SubDirectories": []
+              },
+              {
+                "Name": "33",
+                "SubDirectories": []
+              },
+              {
+                "Name": "35",
+                "SubDirectories": []
+              },
+              {
+                "Name": "3c",
+                "SubDirectories": []
+              },
+              {
+                "Name": "3d",
+                "SubDirectories": []
+              },
+              {
+                "Name": "43",
+                "SubDirectories": []
+              },
+              {
+                "Name": "46",
+                "SubDirectories": []
+              },
+              {
+                "Name": "49",
+                "SubDirectories": []
+              },
+              {
+                "Name": "4c",
+                "SubDirectories": []
+              },
+              {
+                "Name": "4e",
+                "SubDirectories": []
+              },
+              {
+                "Name": "4f",
+                "SubDirectories": []
+              },
+              {
+                "Name": "52",
+                "SubDirectories": []
+              },
+              {
+                "Name": "53",
+                "SubDirectories": []
+              },
+              {
+                "Name": "59",
+                "SubDirectories": []
+              },
+              {
+                "Name": "5a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "5d",
+                "SubDirectories": []
+              },
+              {
+                "Name": "63",
+                "SubDirectories": []
+              },
+              {
+                "Name": "67",
+                "SubDirectories": []
+              },
+              {
+                "Name": "68",
+                "SubDirectories": []
+              },
+              {
+                "Name": "69",
+                "SubDirectories": []
+              },
+              {
+                "Name": "6b",
+                "SubDirectories": []
+              },
+              {
+                "Name": "70",
+                "SubDirectories": []
+              },
+              {
+                "Name": "71",
+                "SubDirectories": []
+              },
+              {
+                "Name": "72",
+                "SubDirectories": []
+              },
+              {
+                "Name": "74",
+                "SubDirectories": []
+              },
+              {
+                "Name": "75",
+                "SubDirectories": []
+              },
+              {
+                "Name": "76",
+                "SubDirectories": []
+              },
+              {
+                "Name": "77",
+                "SubDirectories": []
+              },
+              {
+                "Name": "78",
+                "SubDirectories": []
+              },
+              {
+                "Name": "7a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "7b",
+                "SubDirectories": []
+              },
+              {
+                "Name": "7c",
+                "SubDirectories": []
+              },
+              {
+                "Name": "7d",
+                "SubDirectories": []
+              },
+              {
+                "Name": "85",
+                "SubDirectories": []
+              },
+              {
+                "Name": "86",
+                "SubDirectories": []
+              },
+              {
+                "Name": "87",
+                "SubDirectories": []
+              },
+              {
+                "Name": "88",
+                "SubDirectories": []
+              },
+              {
+                "Name": "89",
+                "SubDirectories": []
+              },
+              {
+                "Name": "8a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "8b",
+                "SubDirectories": []
+              },
+              {
+                "Name": "8d",
+                "SubDirectories": []
+              },
+              {
+                "Name": "8e",
+                "SubDirectories": []
+              },
+              {
+                "Name": "8f",
+                "SubDirectories": []
+              },
+              {
+                "Name": "90",
+                "SubDirectories": []
+              },
+              {
+                "Name": "92",
+                "SubDirectories": []
+              },
+              {
+                "Name": "94",
+                "SubDirectories": []
+              },
+              {
+                "Name": "96",
+                "SubDirectories": []
+              },
+              {
+                "Name": "97",
+                "SubDirectories": []
+              },
+              {
+                "Name": "98",
+                "SubDirectories": []
+              },
+              {
+                "Name": "9a",
+                "SubDirectories": []
+              },
+              {
+                "Name": "9b",
+                "SubDirectories": []
+              },
+              {
+                "Name": "9e",
+                "SubDirectories": []
+              },
+              {
+                "Name": "9f",
+                "SubDirectories": []
+              },
+              {
+                "Name": "a1",
+                "SubDirectories": []
+              },
+              {
+                "Name": "a2",
+                "SubDirectories": []
+              },
+              {
+                "Name": "a5",
+                "SubDirectories": []
+              },
+              {
+                "Name": "a7",
+                "SubDirectories": []
+              },
+              {
+                "Name": "a9",
+                "SubDirectories": []
+              },
+              {
+                "Name": "aa",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ab",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ac",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ad",
+                "SubDirectories": []
+              },
+              {
+                "Name": "af",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b0",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b1",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b2",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b6",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b7",
+                "SubDirectories": []
+              },
+              {
+                "Name": "b9",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ba",
+                "SubDirectories": []
+              },
+              {
+                "Name": "bd",
+                "SubDirectories": []
+              },
+              {
+                "Name": "be",
+                "SubDirectories": []
+              },
+              {
+                "Name": "bf",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c0",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c1",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c2",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c4",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c8",
+                "SubDirectories": []
+              },
+              {
+                "Name": "c9",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ca",
+                "SubDirectories": []
+              },
+              {
+                "Name": "cb",
+                "SubDirectories": []
+              },
+              {
+                "Name": "cd",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d1",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d2",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d3",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d7",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d8",
+                "SubDirectories": []
+              },
+              {
+                "Name": "d9",
+                "SubDirectories": []
+              },
+              {
+                "Name": "da",
+                "SubDirectories": []
+              },
+              {
+                "Name": "dc",
+                "SubDirectories": []
+              },
+              {
+                "Name": "dd",
+                "SubDirectories": []
+              },
+              {
+                "Name": "df",
+                "SubDirectories": []
+              },
+              {
+                "Name": "e1",
+                "SubDirectories": []
+              },
+              {
+                "Name": "e4",
+                "SubDirectories": []
+              },
+              {
+                "Name": "e5",
+                "SubDirectories": []
+              },
+              {
+                "Name": "e6",
+                "SubDirectories": []
+              },
+              {
+                "Name": "e7",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ea",
+                "SubDirectories": []
+              },
+              {
+                "Name": "eb",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ec",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ed",
+                "SubDirectories": []
+              },
+              {
+                "Name": "ef",
+                "SubDirectories": []
+              },
+              {
+                "Name": "f2",
+                "SubDirectories": []
+              },
+              {
+                "Name": "f4",
+                "SubDirectories": []
+              },
+              {
+                "Name": "f6",
+                "SubDirectories": []
+              },
+              {
+                "Name": "f7",
+                "SubDirectories": []
+              },
+              {
+                "Name": "f8",
+                "SubDirectories": []
+              },
+              {
+                "Name": "fa",
+                "SubDirectories": []
+              },
+              {
+                "Name": "fb",
+                "SubDirectories": []
+              },
+              {
+                "Name": "fc",
+                "SubDirectories": []
+              },
+              {
+                "Name": "fd",
+                "SubDirectories": []
+              },
+              {
+                "Name": "fe",
+                "SubDirectories": []
+              },
+              {
+                "Name": "info",
+                "SubDirectories": []
+              },
+              {
+                "Name": "pack",
+                "SubDirectories": []
+              }
+            ]
+          },
+          {
+            "Name": "refs",
+            "SubDirectories": [
+              {
+                "Name": "heads",
+                "SubDirectories": []
+              },
+              {
+                "Name": "remotes",
+                "SubDirectories": [
+                  {
+                    "Name": "origin",
+                    "SubDirectories": []
+                  }
+                ]
+              },
+              {
+                "Name": "tags",
+                "SubDirectories": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": ".vs",
+        "SubDirectories": [
+          {
+            "Name": "DirectoryStructureApp",
+            "SubDirectories": [
+              {
+                "Name": "DesignTimeBuild",
+                "SubDirectories": []
+              },
+              {
+                "Name": "FileContentIndex",
+                "SubDirectories": [
+                  {
+                    "Name": "merges",
+                    "SubDirectories": []
+                  }
+                ]
+              },
+              {
+                "Name": "config",
+                "SubDirectories": []
+              },
+              {
+                "Name": "v17",
+                "SubDirectories": []
+              }
+            ]
+          },
+          {
+            "Name": "ProjectEvaluation",
+            "SubDirectories": []
+          }
+        ]
+      },
+      {
+        "Name": "DirectoryStructureApp.BLL",
+        "SubDirectories": [
+          {
+            "Name": "bin",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "DTOs",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Interfaces",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Mappers",
+            "SubDirectories": []
+          },
+          {
+            "Name": "obj",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": [
+                      {
+                        "Name": "ref",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "refint",
+                        "SubDirectories": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "Services",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Validators",
+            "SubDirectories": []
+          }
+        ]
+      },
+      {
+        "Name": "DirectoryStructureApp.DAL",
+        "SubDirectories": [
+          {
+            "Name": "bin",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "Interfaces",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Migrations",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Models",
+            "SubDirectories": []
+          },
+          {
+            "Name": "obj",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": [
+                      {
+                        "Name": "ref",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "refint",
+                        "SubDirectories": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "Repositories",
+            "SubDirectories": []
+          }
+        ]
+      },
+      {
+        "Name": "DirectoryStructureApp.Web",
+        "SubDirectories": [
+          {
+            "Name": "bin",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": [
+                      {
+                        "Name": "af",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ar",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "az",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "bg",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "bn-BD",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "cs",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "da",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "de",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "el",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "es",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "fa",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "fi-FI",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "fr",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "fr-BE",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "he",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "hr",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "hu",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "hy",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "id",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "is",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "it",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ja",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ko",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ko-KR",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ku",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "lv",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ms-MY",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "mt",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "nb",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "nb-NO",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "nl",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "pl",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "pt",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "pt-BR",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ro",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "ru",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "runtimes",
+                        "SubDirectories": [
+                          {
+                            "Name": "alpine-arm",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "alpine-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "alpine-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "browser-wasm",
+                            "SubDirectories": [
+                              {
+                                "Name": "nativeassets",
+                                "SubDirectories": [
+                                  {
+                                    "Name": "net7.0",
+                                    "SubDirectories": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-arm",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-armel",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-mips64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-musl-arm",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-musl-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-musl-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-ppc64le",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-s390x",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "linux-x86",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "maccatalyst-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "maccatalyst-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "osx-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "osx-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "unix",
+                            "SubDirectories": [
+                              {
+                                "Name": "lib",
+                                "SubDirectories": [
+                                  {
+                                    "Name": "net6.0",
+                                    "SubDirectories": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "win",
+                            "SubDirectories": [
+                              {
+                                "Name": "lib",
+                                "SubDirectories": [
+                                  {
+                                    "Name": "net6.0",
+                                    "SubDirectories": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "win-arm",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "win-arm64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "win-x64",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "win-x86",
+                            "SubDirectories": [
+                              {
+                                "Name": "native",
+                                "SubDirectories": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "sk",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "sl",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "sr",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "sr-Latn",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "sv",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "th-TH",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "tr",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "uk",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "uz-Cyrl-UZ",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "uz-Latn-UZ",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "vi",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "zh-CN",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "zh-Hans",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "zh-Hant",
+                        "SubDirectories": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "Controllers",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Database",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Models",
+            "SubDirectories": []
+          },
+          {
+            "Name": "obj",
+            "SubDirectories": [
+              {
+                "Name": "Debug",
+                "SubDirectories": [
+                  {
+                    "Name": "net7.0",
+                    "SubDirectories": [
+                      {
+                        "Name": "ref",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "refint",
+                        "SubDirectories": []
+                      },
+                      {
+                        "Name": "scopedcss",
+                        "SubDirectories": [
+                          {
+                            "Name": "Views",
+                            "SubDirectories": [
+                              {
+                                "Name": "Shared",
+                                "SubDirectories": []
+                              }
+                            ]
+                          },
+                          {
+                            "Name": "bundle",
+                            "SubDirectories": []
+                          },
+                          {
+                            "Name": "projectbundle",
+                            "SubDirectories": []
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "staticwebassets",
+                        "SubDirectories": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "Properties",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Views",
+            "SubDirectories": [
+              {
+                "Name": "Directories",
+                "SubDirectories": []
+              },
+              {
+                "Name": "Shared",
+                "SubDirectories": []
+              }
+            ]
+          },
+          {
+            "Name": "wwwroot",
+            "SubDirectories": [
+              {
+                "Name": "css",
+                "SubDirectories": []
+              },
+              {
+                "Name": "js",
+                "SubDirectories": []
+              },
+              {
+                "Name": "lib",
+                "SubDirectories": [
+                  {
+                    "Name": "bootstrap",
+                    "SubDirectories": [
+                      {
+                        "Name": "dist",
+                        "SubDirectories": [
+                          {
+                            "Name": "css",
+                            "SubDirectories": []
+                          },
+                          {
+                            "Name": "js",
+                            "SubDirectories": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "jquery",
+                    "SubDirectories": [
+                      {
+                        "Name": "dist",
+                        "SubDirectories": []
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "jquery-validation",
+                    "SubDirectories": [
+                      {
+                        "Name": "dist",
+                        "SubDirectories": []
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "jquery-validation-unobtrusive",
+                    "SubDirectories": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
