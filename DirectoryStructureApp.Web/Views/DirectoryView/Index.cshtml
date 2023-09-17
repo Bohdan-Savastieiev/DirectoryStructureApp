@@ -1,0 +1,15 @@
+﻿@using DirectoryStructureApp.BLL.DTOs;
+@model List<DirectoryDto>
+@{
+    ViewData["Title"] = "Directory Structure";
+}
+
+@foreach(var parentDirectory in Model)
+{
+    <h4>"Folder" - @parentDirectory.Name</h4>
+    foreach (var subDirectory in parentDirectory.SubDirectories)
+    {
+        <a asp-controller="Directories" asp-action="Index" asp-route-directoryId="@subDirectory.Id">@subDirectory.Name</a>
+        <br>
+    }
+}

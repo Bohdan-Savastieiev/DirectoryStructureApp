@@ -13,5 +13,4 @@ public class DirectoryEntity
     public int? ParentDirectoryId { get; set; }
     public DirectoryEntity? ParentDirectory { get; set; }
     public ICollection<DirectoryEntity>? SubDirectories { get; set; }
-
 }

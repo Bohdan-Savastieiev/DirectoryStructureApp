@@ -28,6 +28,10 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+using var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+DbInitializer.Seed(context);
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -49,7 +53,3 @@ app.MapControllerRoute(
     pattern: "{controller=Directories}/{action=Index}/{id?}");
 
 app.Run();
-
-using var scope = app.Services.CreateScope();
-var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-DbInitializer.Seed(context);

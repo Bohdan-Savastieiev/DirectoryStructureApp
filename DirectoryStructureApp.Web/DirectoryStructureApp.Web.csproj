@@ -21,4 +21,8 @@
     <ProjectReference Include="..\DirectoryStructureApp.BLL\DirectoryStructureApp.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+
 </Project>

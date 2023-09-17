@@ -36,6 +36,12 @@ public class DirectoryService : IDirectoryService
         var directoryDtos = _mapper.Map<IEnumerable<DirectoryDto>>(directoryEntities);
         return directoryDtos;
     }
+    public async Task<IEnumerable<DirectoryDto>> GetSubDirectoriesAsync(int parentDirectoryId)
+    {
+        var directoryEntities = await _directoryRepository.GetSubDirectoriesAsync(parentDirectoryId);
+        var directoryDtos = _mapper.Map<IEnumerable<DirectoryDto>>(directoryEntities);
+        return directoryDtos;
+    }
 
     public async Task<DirectoryDto?> GetDirectoryByIdAsync(int id)
     {
@@ -54,7 +60,7 @@ public class DirectoryService : IDirectoryService
 
         var directoryEntity = _mapper.Map<DirectoryEntity>(directoryDto);
 
-        await _directoryRepository.InsertDirectoryAsync(directoryEntity);
+        await _directoryRepository.AddDirectoryAsync(directoryEntity);
         await _directoryRepository.SaveChangesAsync();
     }
 

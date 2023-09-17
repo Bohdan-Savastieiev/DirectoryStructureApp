@@ -14,22 +14,34 @@ public class DirectoryRepository : IDirectoryRepository
     }
     public async Task<IEnumerable<DirectoryEntity>> GetAllDirectoriesAsync()
     {
-        return await _context.Directories.ToListAsync();
+        return await _context.Directories
+            .Include(d => d.SubDirectories)
+            .ToListAsync();
     }
 
     public async Task<IEnumerable<DirectoryEntity>> GetDirectoriesWithoutParentAsync()
     {
         return await _context.Directories
+            .Include(d => d.SubDirectories)
             .Where(d => d.ParentDirectoryId == null)
+            .ToListAsync();
+    }
+    public async Task<IEnumerable<DirectoryEntity>> GetSubDirectoriesAsync(int directoryParentId)
+    {
+        return await _context.Directories
+            .Include(d => d.SubDirectories)
+            .Where(d => d.ParentDirectoryId == directoryParentId)
             .ToListAsync();
     }
 
     public async Task<DirectoryEntity?> GetDirectoryByIdAsync(int id)
     {
-        return await _context.Directories.FindAsync(id);
+        return await _context.Directories
+            .Include(d => d.SubDirectories)
+            .FirstOrDefaultAsync(d => d.Id == id);
     }
 
-    public async Task InsertDirectoryAsync(DirectoryEntity directory)
+    public async Task AddDirectoryAsync(DirectoryEntity directory)
     {
         await _context.Directories.AddAsync(directory);
     }

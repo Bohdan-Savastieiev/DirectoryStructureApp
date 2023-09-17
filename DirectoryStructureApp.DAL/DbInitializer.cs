@@ -25,6 +25,12 @@ public static class DbInitializer
 
             context.Directories.AddRange(primarySources, secondarySources);
             context.SaveChanges();
+
+            var process = new DirectoryEntity { Name = "Process", ParentDirectoryId = graphicProducts.Id };
+            var finalProduct = new DirectoryEntity { Name = "Final Product", ParentDirectoryId = graphicProducts.Id };
+
+            context.Directories.AddRange(process, finalProduct);
+            context.SaveChanges();
         }
     }
 }
