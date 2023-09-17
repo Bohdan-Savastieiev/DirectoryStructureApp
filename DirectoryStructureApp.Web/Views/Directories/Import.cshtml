@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Import Directories From File System";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="path">Path to Import:</label>
+        <input type="text" class="form-control" id="path" name="path" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Import Path</button>
+</form>
+<br>
+<form asp-controller="Directories" asp-action="ImportFile" method="post">
+    <div class="form-group">
+        <label for="file">File to Import:</label>
+        <input type="text" class="form-control" id="filePath" name="filePath" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Import File</button>
+</form>

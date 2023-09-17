@@ -8,4 +8,6 @@ public interface IDirectoryService
     Task<IEnumerable<DirectoryDto>> GetSubDirectoriesAsync(int parentDirectoryId);
     Task<DirectoryDto?> GetDirectoryByIdAsync(int id);
     Task AddDirectoryAsync(DirectoryDto directoryDto);
+    Task AddDirectoriesAsync(List<DirectoryDto> directories);
+    Task DeleteDirectoryAsync(int id);
 }

@@ -1,0 +1,16 @@
+﻿@using DirectoryStructureApp.BLL.DTOs;
+@model DirectoryDto
+@{
+    ViewData["Title"] = "Delete Directory";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="Directories" asp-action="Delete" method="post">
+    <div class="form-group">
+        <label for="path">Are you sure that you want to delete this directory with all subdirectories?</label>
+        <h5>Directory name: <strong>@Model.Name</strong></h5>
+    </div>
+    <input type="hidden" name="directoryId" value="@Model.Id" />
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DirectoryStructureApp.BLL.DTOs;
+﻿namespace DirectoryStructureApp.BLL.DTOs;
 
 public class DirectoryDto
 {
@@ -8,9 +6,5 @@ public class DirectoryDto
     public string Name { get; set; } = null!;
     public int? ParentDirectoryId { get; set; }
     public DirectoryDto? ParentDirectory { get; set; }
-    public List<DirectoryDto> SubDirectories { get; set; }
-    public DirectoryDto()
-    {
-        SubDirectories = new List<DirectoryDto>();
-    }
+    public List<DirectoryDto> SubDirectories { get; set; } = new List<DirectoryDto>();
 }

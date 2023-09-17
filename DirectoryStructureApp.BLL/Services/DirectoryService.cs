@@ -50,6 +50,13 @@ public class DirectoryService : IDirectoryService
         return directoryDto;
     }
 
+    public async Task AddDirectoriesAsync(List<DirectoryDto> directories)
+    {
+        foreach (var directory in directories)
+        {
+            await AddDirectoryAsync(directory);
+        }
+    }
     public async Task AddDirectoryAsync(DirectoryDto directoryDto)
     {
         var validationResult = await _validator.ValidateAsync(directoryDto);

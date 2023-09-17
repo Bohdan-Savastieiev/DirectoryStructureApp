@@ -10,5 +10,7 @@ public class MappingProfile : Profile
     {
         CreateMap<DirectoryEntity, DirectoryDto>();
         CreateMap<DirectoryDto, DirectoryEntity>();
+        CreateMap<DirectoryDto, DirectorySerializationDto>();
+        CreateMap<DirectorySerializationDto, DirectoryDto>();
     }
 }

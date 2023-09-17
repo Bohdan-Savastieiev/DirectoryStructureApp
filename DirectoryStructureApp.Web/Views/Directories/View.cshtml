@@ -1,0 +1,27 @@
+﻿@using DirectoryStructureApp.BLL.DTOs;
+@model List<DirectoryDto>
+@{
+    ViewData["Title"] = "Directory Structure";
+}
+
+@foreach(var parentDirectory in Model)
+{
+    <h4>
+        "Folder" - @parentDirectory.Name
+        <a asp-controller="Directories" asp-action="ConfirmDelete" asp-route-directoryId="@parentDirectory.Id" class="btn btn-danger btn-sm">Delete</a>
+    </h4>
+    foreach (var subDirectory in parentDirectory.SubDirectories)
+    {
+        <a asp-controller="Directories" asp-action="View" asp-route-directoryId="@subDirectory.Id">@subDirectory.Name</a>
+        <br>
+    }
+    <br>
+}
+
+<form asp-controller="Directories" asp-action="ExportFile" method="post">
+    @if (Model.Count == 1)
+    {
+        <input type="hidden" name="directoryId" value="@Model.First().Id" />
+    }
+    <button type="submit" class="btn btn-primary">Export to file</button>
+</form>

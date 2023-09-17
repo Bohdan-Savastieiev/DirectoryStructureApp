@@ -1,0 +1,60 @@
+[
+  {
+    "Name": "Creating Digital Images",
+    "ParentDirectory": null,
+    "SubDirectories": [
+      {
+        "Name": "Evidence",
+        "SubDirectories": []
+      },
+      {
+        "Name": "Graphic Products",
+        "SubDirectories": []
+      },
+      {
+        "Name": "Resources",
+        "SubDirectories": []
+      }
+    ]
+  },
+  {
+    "Name": "DirectoryStructureApp",
+    "ParentDirectory": null,
+    "SubDirectories": [
+      {
+        "Name": ".git",
+        "SubDirectories": []
+      },
+      {
+        "Name": ".vs",
+        "SubDirectories": []
+      },
+      {
+        "Name": "DirectoryStructureApp.BLL",
+        "SubDirectories": []
+      },
+      {
+        "Name": "DirectoryStructureApp.DAL",
+        "SubDirectories": []
+      },
+      {
+        "Name": "DirectoryStructureApp.Web",
+        "SubDirectories": []
+      }
+    ]
+  },
+  {
+    "Name": "Graphic Products",
+    "ParentDirectory": null,
+    "SubDirectories": [
+      {
+        "Name": "Final Product",
+        "SubDirectories": []
+      },
+      {
+        "Name": "Process",
+        "SubDirectories": []
+      }
+    ]
+  }
+]

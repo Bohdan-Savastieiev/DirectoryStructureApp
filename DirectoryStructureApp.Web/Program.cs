@@ -1,3 +1,4 @@
+using AutoMapper;
 using DirectoryStructureApp.BLL.DTOs;
 using DirectoryStructureApp.BLL.Interfaces;
 using DirectoryStructureApp.BLL.Mappers;
@@ -7,8 +8,9 @@ using DirectoryStructureApp.DAL;
 using DirectoryStructureApp.DAL.Interfaces;
 using DirectoryStructureApp.DAL.Repositories;
 using FluentValidation;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using static System.Formats.Asn1.AsnWriter;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IDirectoryRepository, DirectoryRepository>();
 builder.Services.AddScoped<IDirectoryService, DirectoryService>();
+builder.Services.AddScoped<IFileSystemService, FileSystemService>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddTransient<IValidator<DirectoryDto>, DirectoryDtoValidator>();
