@@ -15,6 +15,10 @@ public class FileSystemService : IFileSystemService
     {
         _mapper = mapper;
         _baseExportPath = Path.Combine(env.ContentRootPath, "Exports");
+        if (!Directory.Exists(_baseExportPath))
+        {
+            Directory.CreateDirectory(_baseExportPath);
+        }
     }
 
     public void ExportDirectoriesToFile(IEnumerable<DirectoryDto> directories)
