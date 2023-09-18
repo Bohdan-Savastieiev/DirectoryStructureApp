@@ -12,10 +12,23 @@
     <button type="submit" class="btn btn-primary">Import Path</button>
 </form>
 <br>
-<form asp-controller="Directories" asp-action="ImportFile" method="post">
+<form asp-controller="Directories" asp-action="ImportFile" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="file">File to Import:</label>
-        <input type="text" class="form-control" id="filePath" name="filePath" required />
+        <label for="file">Choose JSON file to upload:</label>
+        <input type="file" id="file" name="file" accept=".json" required />
     </div>
-    <button type="submit" class="btn btn-primary">Import File</button>
+    <button type="submit" class="btn btn-primary">Upload</button>
 </form>
+<br>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+        <br>
+    </div>
+}

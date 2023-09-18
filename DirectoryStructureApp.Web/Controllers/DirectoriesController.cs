@@ -1,7 +1,9 @@
 ﻿using DirectoryStructureApp.BLL.DTOs;
 using DirectoryStructureApp.BLL.Interfaces;
 using DirectoryStructureApp.Web.Models;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace DirectoryStructureApp.Web.Controllers;
@@ -96,23 +98,43 @@ public class DirectoriesController : Controller
             return View();
         }
 
-        var importDirectories = _fileSystemImportService.ImportDirectoriesFromPath(path);
-        await _directoryService.AddDirectoriesAsync(importDirectories);
-        return RedirectToAction("Index");
+        try
+        {
+            var importDirectories = _fileSystemImportService.ImportDirectoriesFromPath(path);
+            await _directoryService.AddDirectoriesAsync(importDirectories);
+            return RedirectToAction("Index");
+        }
+        catch (DirectoryNotFoundException)
+        {
+            ModelState.AddModelError("", "Directory has not been found by the path provided or the path provided is not valid.");
+            return View("Import");
+        }
     }
 
     [HttpPost]
-    public async Task<IActionResult> ImportFile(string filePath)
+    public async Task<IActionResult> ImportFile(IFormFile file)
     {
-        if (string.IsNullOrWhiteSpace(filePath))
-        {
-            return View();
-        }
+        if (file == null || file.Length == 0)
+            return Content("File not selected");
 
-        var importDirectories = _fileSystemImportService.ImportDirectoriesFromFile(filePath);
-        await _directoryService.AddDirectoriesAsync(importDirectories);
-        return RedirectToAction("Index");
+        try
+        {
+            var importDirectories = await _fileSystemImportService.ImportDirectoriesFromFileAsync(file);
+            await _directoryService.AddDirectoriesAsync(importDirectories);
+            return RedirectToAction("Index");
+        }
+        catch(JsonException ex)
+        {
+            ModelState.AddModelError("", "Mistake in file deserialization: " + ex.Message);
+            return View("Import");
+        }
+        catch (ValidationException ex)
+        {
+            ModelState.AddModelError("", "Mistake in file deserialization: " + ex.Message);
+            return View("Import");
+        }
     }
+
 
     [HttpPost]
     public async Task<IActionResult> ExportFile(int? directoryId)

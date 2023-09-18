@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Creating Digital Images",
+    "SubDirectories": [
+      {
+        "Name": "Evidence",
+        "SubDirectories": []
+      },
+      {
+        "Name": "Graphic Products",
+        "SubDirectories": [
+          {
+            "Name": "Process",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Final Product",
+            "SubDirectories": []
+          }
+        ]
+      },
+      {
+        "Name": "Resources",
+        "SubDirectories": [
+          {
+            "Name": "Primary Sources",
+            "SubDirectories": []
+          },
+          {
+            "Name": "Secondary Sources",
+            "SubDirectories": []
+          }
+        ]
+      }
+    ]
+  }
+]

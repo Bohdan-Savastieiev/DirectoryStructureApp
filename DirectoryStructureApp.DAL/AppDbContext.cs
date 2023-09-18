@@ -11,7 +11,7 @@ public class AppDbContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=Database/DirectoryStructureApp.db");
+        optionsBuilder.UseSqlite("Data Source=Files/Database/DirectoryStructureApp.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

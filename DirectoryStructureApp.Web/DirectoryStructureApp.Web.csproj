@@ -24,8 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\" />
-    <Folder Include="Exports\" />
+    <Folder Include="Files\Database\" />
+    <Folder Include="Files\Exports\" />
+    <Folder Include="Files\Imports\" />
   </ItemGroup>
 
 </Project>
