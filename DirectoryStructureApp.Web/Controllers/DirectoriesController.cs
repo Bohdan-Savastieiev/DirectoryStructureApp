@@ -13,7 +13,7 @@ public class DirectoriesController : Controller
     private readonly IDirectoryService _directoryService;
     private readonly IFileSystemService _fileSystemImportService;
     public DirectoriesController(
-        IDirectoryService directoryService, 
+        IDirectoryService directoryService,
         IFileSystemService fileSystemImportService)
     {
         _directoryService = directoryService;
@@ -123,12 +123,12 @@ public class DirectoriesController : Controller
             await _directoryService.AddDirectoriesAsync(importDirectories);
             return RedirectToAction("Index");
         }
-        catch(JsonException ex)
+        catch (ValidationException ex)
         {
             ModelState.AddModelError("", "Mistake in file deserialization: " + ex.Message);
             return View("Import");
         }
-        catch (ValidationException ex)
+        catch (JsonException ex)
         {
             ModelState.AddModelError("", "Mistake in file deserialization: " + ex.Message);
             return View("Import");

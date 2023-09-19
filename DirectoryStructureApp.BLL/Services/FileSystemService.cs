@@ -4,6 +4,7 @@ using DirectoryStructureApp.BLL.Interfaces;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace DirectoryStructureApp.BLL.Services;
 
@@ -27,6 +28,7 @@ public class FileSystemService : IFileSystemService
         var json = JsonConvert.SerializeObject(directoriesForSerialization, Formatting.Indented);
         File.WriteAllText(filePath, json);
     }
+
     public List<DirectoryDto> ImportDirectoriesFromPath(string path)
     {
         var directories = new List<DirectoryDto>();
@@ -59,6 +61,7 @@ public class FileSystemService : IFileSystemService
         var serializedDirectories = File.ReadAllText(filePath);
         return DeserializeAndMapDirectoriesFromFile(serializedDirectories);
     }
+
     private List<DirectoryDto> DeserializeAndMapDirectoriesFromFile(string serializedDirectories)
     {
         var directories = new List<DirectoryDto>();
@@ -94,6 +97,7 @@ public class FileSystemService : IFileSystemService
             PopulateSubDirectories(directoryDto, directory);
         }
     }
+
     private string GetNewFilePath(FileCommunicationType communicationType)
     {
         var path = communicationType == FileCommunicationType.Export

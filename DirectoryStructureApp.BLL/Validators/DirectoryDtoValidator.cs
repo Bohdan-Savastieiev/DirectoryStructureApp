@@ -11,7 +11,5 @@ public class DirectoryDtoValidator : AbstractValidator<DirectoryDto>
         RuleFor(d => d.Name)
             .NotEmpty().WithMessage("Name is required.")
             .Length(1, 255).WithMessage("Name length should be between 1 and 255 characters.");
-        RuleFor(d => d.SubDirectories)
-            .NotEmpty().WithMessage("SubDirectories are required");
     }
 }
