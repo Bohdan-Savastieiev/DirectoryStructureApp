@@ -12,7 +12,8 @@
 ## BLL (Business Logic Layer)
 - IDirectoryService and DirectoryService: An interface and the service for working with directories, such as obtaining root directories, adding, and deleting directories.
 - IFileSystemService and FileSystemService: An interface and the service for working with the file system, including importing directories from a path or file and exporting directories to a file.
-
+**Important**: The ImportDirectoriesFromPath method from FileSystemService looks for a path in the server's folder structure, so you may leak the environment's data structure. Do not use it other than locally.
+  
 ## Web (MVC)
 - Files folder: All export, import files and the Sqlite database are located here in the corresponding folders.
 - DirectoryController: A controller with all main functionality such as:
