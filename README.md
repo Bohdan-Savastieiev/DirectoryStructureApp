@@ -10,12 +10,11 @@
 - DirectorySerializationDto: Object for directory serialization.
 
 ## BLL (Business Logic Layer)
-- IDirectoryService and DirectoryService: An interface defining the main methods for working with directories, such as obtaining root directories, adding, and deleting directories.
-- IFileSystemService and FileSystemService: Interface for working with the file system, including importing directories from a path or file and exporting directories to a file.
+- IDirectoryService and DirectoryService: An interface and the service for working with directories, such as obtaining root directories, adding, and deleting directories.
+- IFileSystemService and FileSystemService: An interface and the service for working with the file system, including importing directories from a path or file and exporting directories to a file.
 
 ## Web (MVC)
-- Exports folder: All export files with serialized directories are located here.
-- Database folder: Sqlite database is located here.
+- Files folder: All export, import files and the Sqlite database are located here in the corresponding folders.
 - DirectoryController: A controller with all main functionality such as:
   - Browsing Directories;
   - Directories Deletion;
