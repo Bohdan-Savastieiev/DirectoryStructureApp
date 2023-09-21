@@ -21,6 +21,5 @@
   - Browsing Directories;
   - Directories Deletion;
   - Import Directories from Path;
-  - Import Directories from File;
   - Export Directories to File.
 
