@@ -21,5 +21,6 @@
   - Browsing Directories;
   - Directories Deletion;
   - Import Directories from Path;
-  - Export Directories to File.
+  - Import Directories from JSON File;
+  - Export Directories to JSON File.
 
